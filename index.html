@@ -18,9 +18,21 @@
     </style>
 </head>
 <body>
+    
+
     <div class="container">
-        <div id="yohoho" data-kinopoisk="1046638"></div>
+        <div id="yohoho"></div>
     </div>
+
+    <script>
+        let params = (new URL(document.location)).searchParams; 
+        let kp = params.get("kp");
+
+        var player = document.getElementById("yohoho");
+        player.setAttribute("data-kinopoisk", kp);
+    </script>
+
+
     <script src="https://yohoho.cc/yo.js"></script>
 </body>
 </html>
